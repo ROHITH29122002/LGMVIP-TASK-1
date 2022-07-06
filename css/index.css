@@ -14,7 +14,11 @@ body{
 }
 
 .head-container{
-    background-color: rgb(182, 31, 228);
+    background-image: url(/headbg.jpg);
+    background-size: cover;
+    background-position: -30% ;
+    background-repeat: no-repeat;
+    height: 40vh;
 }
 
 .todo-heading{
@@ -51,4 +55,39 @@ body{
     background-color: rgb(22, 232, 232);
     height: 3rem;
     padding: 0 1rem;
+}
+
+.tasks-heading{
+    margin-top: 2rem;
+    text-align: center;
+    color: rgb(182, 31, 228);
+}
+
+.tasks-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: blue;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.taskcontainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.closebtn{
+    background: transparent;
+    outline: 0;
+    border: 0;
 }

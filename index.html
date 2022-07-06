@@ -9,11 +9,19 @@
   </head>
   <body>
     <div class="head-container">
-      <h1 class="todo-heading">MY TO-DO LSIT</h1>
+      <h1 class="todo-heading">MY TO-DO LIST</h1>
       <div class="input-container">
-        <input class="input-task" type="text" placeholder="Enter Task..." />
-        <button class="input-task-btn">ADD</button>
+        <input
+          id="task-input"
+          class="input-task"
+          type="text"
+          placeholder="Enter Task..."
+        />
+        <button id="addbtn" class="input-task-btn">ADD</button>
       </div>
     </div>
+    <h1 class="tasks-heading">TASKS</h1>
+    <div id="tasks-container" class="tasks-container"></div>
   </body>
+  <script src="index.js"></script>
 </html>
