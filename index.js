@@ -15,8 +15,24 @@ function createtask(element) {
     taskcontainer.id=element.id;
     taskcontainer.classList.add("taskcontainer");
     document.getElementById("tasks-container").appendChild(taskcontainer);
-    const task = document.createElement("p");
+    const task = document.createElement("h3");
+    task.id = element.id;
+    task.classList.add("taskname");
+    task.onclick=()=>{
+            task.style.textDecoration = "line-through";
+            let id = task.id;
+            tasks.forEach(task => {
+                if(task.id == id){
+                    task.flag = true;
+                }
+            })
+            localStorage.setItem("tasks",JSON.stringify(tasks));
+            location.reload();
+    }
     task.innerHTML = `${element.name}`;
+    if(element.flag){
+        task.style.textDecoration="line-through";
+    }
     taskcontainer.appendChild(task);
     const close = document.createElement("button");
     close.id = element.id;
@@ -29,6 +45,7 @@ function createtask(element) {
         })
         localStorage.setItem("tasks",JSON.stringify(filteredtasks));
         document.getElementById(`${id}`).remove();
+        location.reload();
     }
     taskcontainer.appendChild(close);
 }
@@ -43,12 +60,15 @@ else{
 }
 addbtn.onclick = () => {
     var taskname = document.getElementById("task-input").value;
+    document.getElementById("task-input").value = "";
     var taskobj = {
         id: create_UUID(),
         name: taskname,
+        flag : false,
     }
     tasks.push(taskobj)
     localStorage.setItem("tasks", JSON.stringify(tasks));
     createtask(taskobj);
+    location.reload();
 }
 
