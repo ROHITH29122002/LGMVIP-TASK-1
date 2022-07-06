@@ -14,7 +14,7 @@ body{
 }
 
 .head-container{
-    background-image: url(../headbg.jpg);
+    background-image: url(../images/headbg.jpg);
     background-size: cover;
     background-position: center 30% ;
     background-repeat: no-repeat;
