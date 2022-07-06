@@ -14,9 +14,9 @@ body{
 }
 
 .head-container{
-    background-image: url(/headbg.jpg);
+    background-image: url(../headbg.jpg);
     background-size: cover;
-    background-position: -30% ;
+    background-position: center 30% ;
     background-repeat: no-repeat;
     height: 40vh;
 }
